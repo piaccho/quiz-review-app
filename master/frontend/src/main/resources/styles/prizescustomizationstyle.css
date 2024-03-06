@@ -1,0 +1,50 @@
+.root {
+    -fx-font-size: 14px;
+    -fx-font-family: monospace;
+    -fx-background-color: #D0BFFF;
+}
+
+.center {
+    -fx-background-color: #D0BFFF;
+}
+
+.button {
+    -fx-background-color: #FFF3DA;
+    -fx-border-radius: 10px;
+    -fx-min-height: 35px;
+    -fx-background-radius: 50px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+}
+
+.button:hover {
+    -fx-background-color: #D0BFFF;
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+    -fx-translate-y: -2px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 15, 0, 0, 0);
+}
+
+.list-cell {
+    -fx-background-color: #DFCCFB;
+}
+
+.list-cell:filled:selected {
+    -fx-background-color: #D0BFFF;
+    -fx-font-weight: normal;
+}
+
+.list-cell:filled:selected:focused {
+    -fx-background-color: #D0BFFF;
+    -fx-font-weight: bold;
+}
+
+.titled-pane > .title {
+    -fx-background-color: #BEADFA;
+    -fx-border-width: 2px;
+    -fx-border-color: #DFCCFB;
+    -fx-font-weight: bold;
+}
+
+.titled-pane > .content {
+    -fx-background-color: #FFF3DA;
+}

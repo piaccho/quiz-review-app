@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.unicorns.frontend.controller.QuizQuestionStatisticsDialogController"
+            prefHeight="600.0" prefWidth="800.0">
+    <center>
+        <VBox alignment="TOP_CENTER" prefHeight="300.0" prefWidth="400.0" BorderPane.alignment="CENTER" >
+            <Label text="Distribution of selected question options" style="-fx-font-size: 24px;" VBox.vgrow="NEVER" />
+            <BarChart fx:id="statisticsChart" VBox.vgrow="ALWAYS">
+                <xAxis>
+                    <CategoryAxis label="Question option" />
+                </xAxis>
+                <yAxis>
+                    <NumberAxis label="value in %" />
+                </yAxis>
+            </BarChart>
+        </VBox>
+    </center>
+</BorderPane>

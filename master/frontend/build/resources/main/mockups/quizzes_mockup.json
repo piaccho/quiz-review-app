@@ -1,0 +1,126 @@
+[
+  {
+    "_id": 0,
+    "creationDate": "2023-12-14T10:00:00",
+    "quizEntries": [
+	  {
+		"id": 0,
+		"nickname": "Jacobson",
+		"totalPoints": 0,
+		"timeDifferenceInSeconds": 52,
+		"preferences": "marchewka"
+	  },
+	  {
+		"id": 1,
+		"nickname": "Maggie",
+		"totalPoints": 3,
+		"timeDifferenceInSeconds": 88,
+		"preferences": "weterynarz"
+	  },
+	  {
+		"id": 2,
+		"nickname": "Lolita",
+		"totalPoints": 1,
+		"timeDifferenceInSeconds": 85,
+		"preferences": "marchewka"
+	  },
+	  {
+		"id": 3,
+		"nickname": "Finch",
+		"totalPoints": 1,
+		"timeDifferenceInSeconds": 28,
+		"preferences": "marchewka"
+	  },
+	  {
+		"id": 4,
+		"nickname": "Barbara",
+		"totalPoints": 3,
+		"timeDifferenceInSeconds": 64,
+		"preferences": "marchewka"
+	  }
+	]
+  },
+  {
+  	"_id": 1,
+    "creationDate": "2023-12-15T11:30:00",
+    "quizEntries": [
+	  {
+		"id": 0,
+		"nickname": "Gomez",
+		"totalPoints": 2,
+		"timeDifferenceInSeconds": 60,
+		"preferences": "weterynarz"
+	  },
+	  {
+		"id": 1,
+		"nickname": "Bobbi",
+		"totalPoints": 1,
+		"timeDifferenceInSeconds": 70,
+		"preferences": "marchewka"
+	  },
+	  {
+		"id": 2,
+		"nickname": "Jane",
+		"totalPoints": 1,
+		"timeDifferenceInSeconds": 112,
+		"preferences": "weterynarz"
+	  },
+	  {
+		"id": 3,
+		"nickname": "Contreras",
+		"totalPoints": 2,
+		"timeDifferenceInSeconds": 26,
+		"preferences": "marchewka"
+	  },
+	  {
+		"id": 4,
+		"nickname": "Dionne",
+		"totalPoints": 1,
+		"timeDifferenceInSeconds": 31,
+		"preferences": "weterynarz"
+	  }
+	]
+  },
+  {
+  	"_id": 2,
+    "creationDate": "2023-12-16T09:45:00",
+    "quizEntries": [
+	  {
+		"id": 0,
+		"nickname": "Lola",
+		"totalPoints": 2,
+		"timeDifferenceInSeconds": 28,
+		"preferences": "sianko"
+	  },
+	  {
+		"id": 1,
+		"nickname": "Bishop",
+		"totalPoints": 1,
+		"timeDifferenceInSeconds": 42,
+		"preferences": "weterynarz"
+	  },
+	  {
+		"id": 2,
+		"nickname": "Parks",
+		"totalPoints": 3,
+		"timeDifferenceInSeconds": 96,
+		"preferences": "sianko"
+	  },
+	  {
+		"id": 3,
+		"nickname": "Oneal",
+		"totalPoints": 3,
+		"timeDifferenceInSeconds": 33,
+		"preferences": "marchewka"
+	  },
+	  {
+		"id": 4,
+		"nickname": "Webster",
+		"totalPoints": 1,
+		"timeDifferenceInSeconds": 69,
+		"preferences": "weterynarz"
+	  }
+	]
+  }
+]
+

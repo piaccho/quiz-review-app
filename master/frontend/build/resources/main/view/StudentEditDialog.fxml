@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.unicorns.frontend.controller.StudentEditDialogController"
+            prefHeight="200.0" prefWidth="300.0"
+            stylesheets="/styles/studenteditstyle.css">
+    <center>
+        <VBox alignment="CENTER" prefHeight="300.0" prefWidth="400.0" styleClass="background">
+            <VBox styleClass="v-all" alignment="CENTER">
+                <VBox styleClass="combobo">
+                    <ComboBox fx:id="prizesComboBox" minWidth="150"/>
+                </VBox>
+                <Button fx:id="applyChangesButton" alignment="CENTER" maxWidth="150" mnemonicParsing="false" onAction="#handleApplyChangesAction" text="Apply Changes">
+                </Button>
+            </VBox>
+        </VBox>
+    </center>
+</BorderPane>

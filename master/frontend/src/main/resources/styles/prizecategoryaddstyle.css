@@ -1,0 +1,130 @@
+.root {
+    -fx-font-size: 14px;
+    -fx-font-family: monospace;
+    -fx-background-color: #ffffff;
+}
+
+.button {
+    -fx-background-color: #FFF3DA;
+    -fx-border-radius: 10px;
+    -fx-min-height: 35px;
+    -fx-background-radius: 50px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+}
+
+.button:hover {
+    -fx-background-color: #D0BFFF;
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+    -fx-translate-y: -2px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 15, 0, 0, 0);
+}
+
+.background {
+    -fx-background-color: #DFCCFB;
+}
+
+.table-view {
+    -fx-background-color: #FFF3DA;
+}
+
+.table-view .column-header {
+    -fx-background-color: #BEADFA;
+    -fx-border-width: 2px;
+    -fx-border-color: #DFCCFB;
+}
+.table-row-cell{
+    -fx-background-color: -fx-table-cell-border-color, #FFF2D8;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; /* 0 */
+}
+
+.table-row-cell:odd{
+    -fx-background-color: -fx-table-cell-border-color, #F9E8FF;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; /* 0 */
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #D0BFFF;
+    -fx-background-insets: 0;
+    -fx-background-radius: 1;
+    -fx-border-color: #DFCCFB;
+    -fx-font-weight: bold;
+}
+
+.combo-box
+{
+    -fx-background-color: #FFF3DA;
+    -fx-text-fill: -fx-text-base-color;
+    -fx-padding: 3 0 2 7;
+    -fx-cell-size: 1.66667em;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+}
+
+.combo-box .list-cell
+{
+    -fx-background-color: #FFF3DA;
+    -fx-text-fill: -fx-text-base-color;
+    -fx-padding: 3 0 2 7;
+    -fx-cell-size: 1.66667em;
+}
+
+.combo-box-popup .list-view
+{
+    -fx-background-color: #FFF3DA;
+    -fx-background-insets: 0, 1;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 8, 0.0 , 0 , 0 );
+    -fx-border-radius: 10px;
+}
+
+.combo-box-popup .list-view .list-cell
+{
+    -fx-border-color: #DFCCFB;
+}
+
+.combo-box-popup .list-view .list-cell:filled:hover
+{
+    -fx-background-color: #DFCCFB;
+}
+
+.combo-box-base
+{
+    -fx-background-color: #FFF3DA;
+    -fx-text-fill: -fx-text-base-color;
+    -fx-padding: 3 0 2 7;
+    -fx-cell-size: 1.66667em;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 50px;
+}
+
+.h-name {
+    -fx-border-insets: 10px;
+    -fx-background-insets: 10px;
+    -fx-padding: 10px;
+}
+
+.v-table {
+    -fx-border-insets: 10px;
+    -fx-background-insets: 10px;
+    -fx-padding: 10px;
+}
+
+.h-prize {
+    -fx-border-insets: 10px;
+    -fx-background-insets: 10px;
+    -fx-padding: 10px;
+}
+
+.text-field {
+    -fx-background-color: #FFF3DA;
+    -fx-border-radius: 50px;
+    -fx-min-height: 25px;
+    -fx-background-radius: 50px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+}
+
+.text-field:focused {
+    -fx-border-color: #BEADFA;
+    -fx-border-width: 2px;
+}

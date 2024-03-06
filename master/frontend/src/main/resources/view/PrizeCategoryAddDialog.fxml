@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.unicorns.frontend.controller.PrizeCategoryAddController"
+            prefHeight="400.0" prefWidth="600.0"
+            stylesheets="/styles/prizecategoryaddstyle.css">
+    <center>
+        <VBox alignment="TOP_CENTER" prefHeight="400.0" prefWidth="400.0" BorderPane.alignment="CENTER" styleClass="background">
+            <HBox spacing="10" alignment="CENTER" styleClass="h-name">
+                <Label text="Name:"/>
+                <TextField fx:id="categoryTextField"/>
+                <HBox.margin>
+                    <Insets top="10.0" />
+                </HBox.margin>
+            </HBox>
+            <VBox styleClass="v-table">
+                <TableView fx:id="prizesTableView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <columns>
+                        <TableColumn fx:id="prizeNameColumn" prefWidth="75.0" text="Prizes" />
+                    </columns>
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                    </columnResizePolicy>
+                </TableView>
+            </VBox>
+            <Label text="Add prizes:"/>
+            <HBox spacing="10" alignment="CENTER" styleClass="h-prize">
+                <ComboBox fx:id="prizesCategoryBox" minWidth="150"/>
+                <Button fx:id="addPrizeButton" text="+" onAction="#handleAddPrizeAction"/>
+            </HBox>
+            <Button fx:id="addPrizeBoxButton" alignment="CENTER" maxWidth="150" mnemonicParsing="false" onAction="#handleAddPrizeCategoryAction" text="Add PrizeBox">
+            </Button>
+            <Label fx:id="validationInfo"/>
+        </VBox>
+    </center>
+</BorderPane>
+

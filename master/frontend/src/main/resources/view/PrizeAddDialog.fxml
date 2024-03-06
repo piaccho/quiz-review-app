@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.unicorns.frontend.controller.PrizeAddDialogController"
+            prefHeight="200.0" prefWidth="300.0">
+    <center>
+        <VBox alignment="TOP_CENTER" prefHeight="300.0" prefWidth="400.0" BorderPane.alignment="CENTER" >
+            <HBox spacing="10" alignment="CENTER">
+                <Label text="Name:"/>
+                <TextField fx:id="prizeTextField"/>
+                <HBox.margin>
+                    <Insets top="10.0" />
+                </HBox.margin>
+            </HBox>
+            <HBox spacing="10" alignment="TOP_CENTER">
+                <Label text="Description:"/>
+                <TextField fx:id="descriptionPrizeTextField" minHeight="100.0"/>
+                <HBox.margin>
+                    <Insets top="10.0" />
+                </HBox.margin>
+            </HBox>
+            <Button fx:id="addPrizeButton" alignment="CENTER" maxWidth="150" mnemonicParsing="false" onAction="#handleAddPrizeAction" text="Add Prize">
+            </Button>
+        </VBox>
+    </center>
+</BorderPane>
+

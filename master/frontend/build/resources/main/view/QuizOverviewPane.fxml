@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+
+<!--UWAGA: Jest tutaj dużo id, część prawdopodobnie nie będzie potrzebna, jeśli nie będzie, to po prostu je usuniemy później-->
+
+<?import java.net.URL?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.unicorns.frontend.controller.QuizOverviewController"
+            prefHeight="600.0" prefWidth="1200.0"
+            stylesheets="/styles/mainstyle.css">
+    <left>
+        <VBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER" styleClass="left-section">
+            <TitledPane fx:id="QuizzesTitle" animated="false" layoutY="427.0" prefHeight="500.0" prefWidth="150.0" text="Quizzes">
+                <ListView fx:id="quizListView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="TOP_LEFT">
+                </ListView>
+            </TitledPane>
+            <TitledPane fx:id="PresetsTitle" animated="false" layoutY="427.0" prefHeight="500.0" prefWidth="150.0" text="Presets">
+                <ListView fx:id="presetListView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="TOP_LEFT">
+                    <Label text="Preset 1" />
+                    <Label text="Preset 2" />
+                </ListView>
+            </TitledPane>
+        </VBox>
+    </left>
+    <center>
+        <TableView fx:id="quizTableView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <columns>
+                <TableColumn fx:id="nicknameColumn" prefWidth="75.0" text="Nickname" />
+                <TableColumn fx:id="totalPointsColumn" prefWidth="75.0" text="Total points" />
+                <TableColumn fx:id="timeDifferenceInSecondsColumn" prefWidth="75.0" text="Time" />
+                <TableColumn fx:id="prizeColumn" prefWidth="75.0" text="Prize" />
+            </columns>
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+            </columnResizePolicy>
+
+        </TableView>
+    </center>
+    <right>
+        <VBox alignment="TOP_CENTER" prefHeight="500.0" prefWidth="250.0" BorderPane.alignment="CENTER" styleClass="VBox-right">
+            <VBox prefHeight="100.0" prefWidth="250.0" BorderPane.alignment="CENTER">
+                <opaqueInsets>
+                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                </opaqueInsets>
+                <children>
+                    <Button fx:id="addQuizButton" alignment="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleAddQuizAction" text="Add New Quiz">
+                        <VBox.margin>
+                            <Insets bottom="10.0" left="10.0" right="10.0" top="15.0" />
+                        </VBox.margin></Button>
+                    <Button fx:id="addPresetButton" alignment="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleAddPresetAction" text="Add New Preset">
+                        <VBox.margin>
+                            <Insets bottom="10.0" left="10.0" right="10.0" top="1.0" />
+                        </VBox.margin></Button>
+                </children>
+                <BorderPane.margin>
+                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                </BorderPane.margin>
+            </VBox>
+            <VBox prefHeight="150.0" prefWidth="150.0" BorderPane.alignment="CENTER">
+                <opaqueInsets>
+                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                </opaqueInsets>
+                <children>
+                    <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="Current preset:" />
+                    <Label fx:id="currentPresetName" alignment="CENTER" maxWidth="1.7976931348623157E308" text="Choose preset from list" />
+                    <Button fx:id="applyPresetButton" alignment="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleApplyPresetAction" text="Apply Preset">
+                        <VBox.margin>
+                            <Insets bottom="10.0" left="10.0" right="10.0" top="5.0" />
+                        </VBox.margin></Button>
+                    <Button fx:id="editPresetButton" alignment="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Edit Preset">
+                        <VBox.margin>
+                            <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                        </VBox.margin></Button>
+
+                </children>
+                <BorderPane.margin>
+                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                </BorderPane.margin>
+            </VBox>
+            <VBox prefHeight="100.0" prefWidth="150.0" BorderPane.alignment="CENTER">
+                <opaqueInsets>
+                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                </opaqueInsets>
+                <children>
+                    <Button fx:id="editStudentButton" alignment="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleEditStudentAction" text="Edit Student">
+                        <VBox.margin>
+                            <Insets bottom="10.0" left="10.0" right="10.0" top="5.0" />
+                        </VBox.margin></Button>
+                    
+                    <Button fx:id="customizePrizesButton" alignment="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handlePrizesCustomizationAction" text="Customize Prizes">
+                        <VBox.margin>
+                            <Insets bottom="10.0" left="10.0" right="10.0" top="5.0" />
+                        </VBox.margin></Button>
+                </children>
+                <BorderPane.margin>
+                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                </BorderPane.margin>
+            </VBox>
+            <VBox prefHeight="125.0" prefWidth="150.0" BorderPane.alignment="BOTTOM_LEFT">
+                <opaqueInsets>
+                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                </opaqueInsets>
+                <children>
+                    <Button fx:id="exportButton" alignment="CENTER" maxWidth="1.7976931348623157E308" onAction="#handleExportQuizAction" mnemonicParsing="false" text="Export">
+                        <VBox.margin>
+                            <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                        </VBox.margin></Button>
+                </children>
+                <BorderPane.margin>
+                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                </BorderPane.margin>
+            </VBox>
+            <VBox prefHeight="125.0" prefWidth="150.0" BorderPane.alignment="BOTTOM_LEFT">
+                <opaqueInsets>
+                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                </opaqueInsets>
+                <children>
+                    <Button fx:id="statisticsButton" alignment="CENTER" maxWidth="1.7976931348623157E308" onAction="#handleStatisticsAction" mnemonicParsing="false" text="Statistics">
+                        <VBox.margin>
+                            <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                        </VBox.margin></Button>
+                </children>
+                <BorderPane.margin>
+                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                </BorderPane.margin>
+            </VBox>
+        </VBox>
+    </right>
+</BorderPane>

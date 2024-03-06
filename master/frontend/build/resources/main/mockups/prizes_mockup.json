@@ -1,0 +1,57 @@
+[
+  {
+    "id": 0,
+    "name": "Marchewka",
+    "description": "Marchewka jest pyszna"
+  },
+  {
+    "id": 1,
+    "name": "Ziemniaki",
+    "description": "Ziemniaki są pyszne"
+  },
+  {
+    "id": 2,
+    "name": "Pomidory",
+    "description": "Pomidory są pyszne"
+  },
+  {
+    "id": 3,
+    "name": "Cebula",
+    "description": "Cebula jest pyszna"
+  },
+  {
+    "id": 4,
+    "name": "Papryka",
+    "description": "Papryka jest pyszna"
+  },
+  {
+    "id": 5,
+    "name": "Ogórek",
+    "description": "Ogórek jest pyszny"
+  },
+  {
+    "id": 6,
+    "name": "Sałata",
+    "description": "Sałata jest pyszna"
+  },
+  {
+    "id": 7,
+    "name": "Pietruszka",
+    "description": "Pietruszka jest pyszna"
+  },
+  {
+    "id": 8,
+    "name": "Kapusta",
+    "description": "Kapusta jest pyszna"
+  },
+  {
+    "id": 9,
+    "name": "Kalafior",
+    "description": "Kalafior jest pyszny"
+  },
+  {
+    "id": 10,
+    "name": "Brokuły",
+    "description": "Brokuły są pyszne"
+  }
+]

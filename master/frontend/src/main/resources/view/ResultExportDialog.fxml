@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.unicorns.frontend.controller.FileExportController"
+            prefHeight="200.0" prefWidth="300.0"
+            stylesheets="/styles/exportstyle.css">
+    <center>
+        <VBox alignment="CENTER" spacing="20" xmlns:fx="http://javafx.com/fxml/1" prefWidth="300" prefHeight="200" styleClass="background">
+            <Label text="Export to file" VBox.vgrow="NEVER"/>
+            <HBox spacing="20" alignment="CENTER">
+                <RadioButton fx:id="radioPDF" text="PDF"/>
+                <RadioButton fx:id="radioXLSX" text="XLSX"/>
+            </HBox>
+            <Button fx:id="exportButton" text="Export" onAction="#handleExport" VBox.vgrow="NEVER"/>
+
+            <fx:define>
+                <ToggleGroup fx:id="formatToggleGroup">
+                    <toggles>
+                        <fx:reference source="radioPDF"/>
+                        <fx:reference source="radioXLSX"/>
+                    </toggles>
+                </ToggleGroup>
+            </fx:define>
+        </VBox>
+    </center>
+</BorderPane>
