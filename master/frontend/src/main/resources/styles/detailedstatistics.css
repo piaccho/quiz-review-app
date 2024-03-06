@@ -1,0 +1,40 @@
+.root {
+    -fx-font-size: 14px;
+    -fx-font-family: monospace;
+    -fx-background-color: #FFF3DA;
+}
+
+.chart-plot-background {
+    -fx-background-color: #F9E8FF;
+}
+
+.chart-legend {
+    -fx-background-color: #F9E8FF;
+}
+
+.series0.chart-bar {
+    -fx-bar-fill: #FFA69E;
+}
+
+.series1.chart-bar {
+    -fx-bar-fill: #92DCE5;
+}
+
+.series2.chart-bar {
+    -fx-bar-fill: #E2F89C;
+}
+
+.series3.chart-bar {
+    -fx-bar-fill: #9B7EDE;
+}
+
+.series4.chart-bar {
+    -fx-bar-fill: #FFAD69;
+}
+
+.series5.chart-bar {
+    -fx-bar-fill: #E08D79;
+}
+
+
+

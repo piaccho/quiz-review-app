@@ -8,13 +8,14 @@
 <BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.unicorns.frontend.controller.QuizStatisticsDialogController"
-            prefHeight="600.0" prefWidth="800.0">
+            prefHeight="600.0" prefWidth="800.0"
+            stylesheets="/styles/statistics.css">
     <center>
         <VBox alignment="TOP_CENTER" prefHeight="300.0" prefWidth="400.0" BorderPane.alignment="CENTER" >
             <Label text="Percentage of correct answers to questions" style="-fx-font-size: 24px;" VBox.vgrow="NEVER" />
             <BarChart fx:id="statisticsChart" VBox.vgrow="ALWAYS">
                 <xAxis>
-                    <CategoryAxis label="Questions" />
+                    <CategoryAxis label="Questions" style="-fx-font-weight: bold"/>
                 </xAxis>
                 <yAxis>
                     <NumberAxis label="value in %" />
