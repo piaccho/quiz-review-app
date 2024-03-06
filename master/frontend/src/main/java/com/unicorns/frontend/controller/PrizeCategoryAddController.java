@@ -102,9 +102,11 @@ public class PrizeCategoryAddController {
             chosenPrizesMap.put(prizeName, prize.getId());
             prizesCategoryBox.getSelectionModel().clearSelection();
         });
+        populateComboBox();
     }
     private void populateComboBox() {
         prizeContainer.setPrizes(prizeHandler.fetchPrizesREST());
+        prizeContainer.getPrizes().removeIf(prize -> chosenPrizesMap.containsKey(prize.getName()));
         ObservableList<String> options = FXCollections.observableArrayList(prizeContainer.getPrizeNames());
         prizesCategoryBox.setItems(options);
     }
