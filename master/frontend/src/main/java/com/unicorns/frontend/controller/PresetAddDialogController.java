@@ -51,18 +51,25 @@ public class PresetAddDialogController {
     @FXML
     public ListView prizesListView;
 
+    @FXML
+    private Label maxPointsLabel;
+
+    private int maxPoints;
+
     private Stage dialogStage;
     private int valueLimit;
 
     private Strategy addingPresetStrategy;
     private int presetEntriesNumber;
-    private int maxPoints;
+
     private HashMap<String, Long> prizeContainerMap;
     private List<PresetEntry> presetEntries;
 
     private PrizeCategoryHandler prizeCategoryHandler;
 
     private PresetHandler presetHandler;
+
+    private List<Long> usedValues;
 
     @FXML
     public void initialize() {
@@ -101,6 +108,7 @@ public class PresetAddDialogController {
                 addPresetEntryButton.setDisable(false);
                 setAddingPresetStrategy(Strategy.POINTS);
                 presetEntries = new ArrayList<>();
+                presetEntriesNumber = 0;
 
                 setPointsStrategy();
             }
@@ -113,6 +121,7 @@ public class PresetAddDialogController {
                 addPresetEntryButton.setDisable(false);
                 setAddingPresetStrategy(Strategy.TIME);
                 presetEntries = new ArrayList<>();
+                presetEntriesNumber = 0;
                 setTimeStrategy();
 
             }
@@ -120,16 +129,20 @@ public class PresetAddDialogController {
     }
 
     private int getMaxPointsFromQuiz() {
-        //TODO: implement
         return 2;
     }
 
     private void setTimeStrategy() {
+
         valueLimit = 0;
+        maxPointsLabel.setText("Actual value: " + valueLimit);
     }
 
     private void setPointsStrategy() {
+
+        usedValues = new ArrayList<>();
         valueLimit = 0;
+        maxPointsLabel.setText("Max points: " + maxPoints);
     }
 
         public void handleAddPresetEntryButtonClick(ActionEvent actionEvent) {
@@ -137,43 +150,55 @@ public class PresetAddDialogController {
             String prizeContainerName = prizeContainersComboBox.getValue();
             int value = Integer.parseInt(valueTextField.getText());
             if (validatePresetEntry(prizeContainerName, value)) {
-                PresetEntryDTO presetEntry = new PresetEntryDTO(prizeContainerName, value);
-                presetEntriesTableView.getItems().add(presetEntry);
-                presetEntries.add(new PresetEntry(prizeContainerMap.get(prizeContainerName), value));
+                PresetEntry presetEntry = new PresetEntry(prizeContainerMap.get(prizeContainerName), value);
+                if (presetEntries.contains(presetEntry)) {
+                    showErrorLabel("Preset entry already exists!");
+                    return;
+                }
+                PresetEntryDTO presetEntryDTO = new PresetEntryDTO(prizeContainerName, value);
+                presetEntriesTableView.getItems().add(presetEntryDTO);
+                presetEntries.add(presetEntry);
                 presetEntriesNumber++;
                 valueLimit += value;
+                usedValues.add((long) value);
                 prizeContainersComboBox.getSelectionModel().clearSelection();
                 valueTextField.clear();
             }
         } catch (NumberFormatException e) {
-            showErrorLabel("Puste pola!");
+            showErrorLabel("Value must be a number!");
         }
     }
 
     private boolean validatePresetEntry(String prizeContainerName, int value) {
         if (prizeContainerName != null && value >= 0) {
+            System.out.println("Preset entries number: " + presetEntriesNumber);
             if(addingPresetStrategy == Strategy.TIME) {
                 if (presetEntriesNumber >= 2) {
-                    showErrorLabel("Nie można dodać więcej niż 2 wpisów dla strategii czasowej!");
+                    showErrorLabel("Time strategy can have only 2 entries");
                     return false;
                 }
                 if (presetEntriesNumber == 1 && valueLimit + value != 100) {
-                    showErrorLabel("Suma wartości dwóch wpisów musi wynosić 100");
+                    showErrorLabel("Sum of time entries must be equal to 100");
                     return false;
                 }
                 if (valueLimit + value > 100) {
-                    showErrorLabel("Suma wartości wpisów nie może przekraczać 100");
+                    showErrorLabel("Sum of time entries cannot be greater than 100!");
                     return false;
                 }
+                maxPointsLabel.setText("Actual value: " + value);
                 return true;
             }
             if(addingPresetStrategy == Strategy.POINTS) {
                 if (presetEntriesNumber > maxPoints) {
-                    showErrorLabel("Nie można dodać więcej wpisów niż możliwych punktów!");
+                    showErrorLabel("Cannot add more entries than possible points!");
                     return false;
                 }
                 if (value > maxPoints) {
-                    showErrorLabel("Wartość wpisu nie może być większa niż możliwych punktów!");
+                    showErrorLabel("Cannot add more points than possible points!");
+                    return false;
+                }
+                if (usedValues.contains((long) value)) {
+                    showErrorLabel("Value already used!");
                     return false;
                 }
                 return true;

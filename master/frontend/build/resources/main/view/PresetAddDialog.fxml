@@ -55,6 +55,7 @@
                     <ComboBox fx:id="prizeContainersComboBox" minWidth="150"/>
                     <TextField fx:id="valueTextField" maxWidth="50"/>
                     <Button fx:id="addPresetEntryButton" text="+" onAction="#handleAddPresetEntryButtonClick"/>
+                    <Label fx:id="maxPointsLabel"/>
                 </HBox>
                 <HBox alignment="CENTER">
                     <Button fx:id="addPresetButton" text="Add new preset" onAction="#handleAddPresetButtonClick"/>
