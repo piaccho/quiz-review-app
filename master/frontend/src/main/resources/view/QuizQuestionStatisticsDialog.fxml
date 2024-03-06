@@ -8,7 +8,8 @@
 <BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.unicorns.frontend.controller.QuizQuestionStatisticsDialogController"
-            prefHeight="600.0" prefWidth="800.0">
+            prefHeight="600.0" prefWidth="800.0"
+            stylesheets="/styles/detailedstatistics.css">
     <center>
         <VBox alignment="TOP_CENTER" prefHeight="300.0" prefWidth="400.0" BorderPane.alignment="CENTER" >
             <Label text="Distribution of selected question options" style="-fx-font-size: 24px;" VBox.vgrow="NEVER" />

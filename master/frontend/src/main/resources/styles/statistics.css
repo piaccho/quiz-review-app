@@ -1,0 +1,21 @@
+.root {
+    -fx-font-size: 14px;
+    -fx-font-family: monospace;
+    -fx-background-color: #FFF3DA;
+}
+
+.chart-plot-background {
+    -fx-background-color: #F9E8FF;
+}
+
+.chart-legend {
+    -fx-background-color: #F9E8FF;
+}
+
+.series0.chart-bar {
+    -fx-bar-fill: #BEADFA;
+}
+
+.series1.chart-bar {
+    -fx-bar-fill: #9B7EDE;
+}
