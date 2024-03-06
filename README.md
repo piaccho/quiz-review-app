@@ -11,9 +11,11 @@
 * [Features](#features)
 * [Setup](#setup)
 * [Example of use](#example-of-use)
+* [Credits](#credits)
 
+<div id="overview" />
 
-## 🔎 Overview  <a name="overview" />
+## 🔎 Overview  
 This application simplifies managing quiz results by providing tools for:
 
 * Importing quiz data from xlsx files.
@@ -21,8 +23,10 @@ This application simplifies managing quiz results by providing tools for:
 * Defining and assigning rewards based on user-defined strategies.
 * Exporting results with assigned awards to xlsx and pdf formats.
 * Displaying comprehensive quiz statistics for analyzing performance.
-  
-## ⚙️ Used technologies <a name="used-technologies" />
+
+<div id="used-technologies" />
+
+## ⚙️ Used technologies
 
 * Programming Language: <b>Java 17</b>
 * Frontend Framework: <b>JavaFX 17</b>
@@ -31,7 +35,9 @@ This application simplifies managing quiz results by providing tools for:
 
 This project is intended for demonstration purposes and can be further extended to include additional functionalities.
 
-## ✨ Features <a name="features" />
+<div id="features" />
+
+## ✨ Features 
 
 Here're some of the project's best features:
 
@@ -50,8 +56,9 @@ Here're some of the project's best features:
     -   Percentage of correct answers for each question.
     -   Distribution of answers for a specific selected question.
 
+<div id="setup" />
 
-## 🛠️ Setup <a name="setup" />
+## 🛠️ Setup 
 
 **Prerequisites:**
 
@@ -76,6 +83,14 @@ Here're some of the project's best features:
 	    
 	<b>Note</b>: If you're using an IDE that supports Gradle (e.g., IntelliJ IDEA), you can configure it to run the `bootRun` task directly both for the server and client.
 
-## 💻 Example of use <a name="example-of-use" />
+<div id="example-of-use" />
 
+## 💻 Example of use 
 
+## Credits
+
+This project was developed by the following team members:
+
+- Sebastian Piaskowy - Main contributor and maintainer.
+- Zofia Lenart - Main contributor and maintainer.
+- Norbert Żmija - Minor features to the project.
