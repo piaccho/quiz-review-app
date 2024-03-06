@@ -1,6 +1,7 @@
 package com.unicorns.frontend;
 
 import javafx.application.Application;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import com.unicorns.frontend.controller.QuizAppController;
 

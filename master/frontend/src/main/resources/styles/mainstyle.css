@@ -1,6 +1,10 @@
+@font-face {
+    src: url('/fonts/Lora-Regular.ttf');
+}
+
 .root {
     -fx-font-size: 14px;
-    -fx-font-family: monospace;
+    -fx-font-family: 'Lora Regular';
     -fx-background-color: #ffffff;
 }
 
