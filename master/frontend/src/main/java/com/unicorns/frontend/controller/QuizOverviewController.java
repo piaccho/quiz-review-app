@@ -116,8 +116,8 @@ public class QuizOverviewController {
                 Bindings.size(presetListView.getSelectionModel().getSelectedItems()).isNotEqualTo(1)
                         .or(Bindings.size(quizListView.getSelectionModel().getSelectedItems()).isNotEqualTo(1))
         );
-        editPresetButton.disableProperty().bind(Bindings.size(presetListView.getSelectionModel()
-                .getSelectedItems()).isNotEqualTo(1));
+//        editPresetButton.disableProperty().bind(Bindings.size(presetListView.getSelectionModel()
+//                .getSelectedItems()).isNotEqualTo(1));
         editStudentButton.disableProperty().bind(Bindings.size(quizTableView.getSelectionModel()
                 .getSelectedItems()).isNotEqualTo(1));
         quizTableView.setPlaceholder(new Label("Select a quiz from the list to view its details."));
