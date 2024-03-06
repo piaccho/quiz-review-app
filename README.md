@@ -1,6 +1,6 @@
 
 
-<h1 align="center" id="title">Quiz Review App</h1>
+<h1 align="center" id="title">Quiz Review App 🦄</h1>
 
 <p id="description">This project is a desktop application built as a part of Object-oriented technologies course at AGH University of Krakow. It allows for importing quiz results in form of Microsoft Forms xlsx output file and displaying them in a user-friendly format and assigning rewards based on configurable strategies.</p>
 
