@@ -62,26 +62,35 @@ Here're some of the project's best features:
 
 **Prerequisites:**
 
--   Java Development Kit (JDK) 17 or later: Download and install from  [https://www.oracle.com/java/technologies/downloads/](https://www.oracle.com/java/technologies/downloads/). Verify installation by running  `java -version`  in your terminal.
--   Gradle (build automation tool): Download and install Gradle distribution from [https://services.gradle.org/distributions/gradle-8.4-bin.zip](https://services.gradle.org/distributions/gradle-8.4-bin.zip). Verify installation by running  `gradle --version`  in your terminal.
+-   **JDK 17 or later**: Download and install from  [https://www.oracle.com/java/technologies/downloads/](https://www.oracle.com/java/technologies/downloads/). Verify installation by running  `java -version`  in your terminal.
+-   **Gradle**: Download and install Gradle distribution from [https://services.gradle.org/distributions/gradle-8.4-bin.zip](https://services.gradle.org/distributions/gradle-8.4-bin.zip). Verify installation by running  `gradle --version`  in your terminal.
+- **(Optional) Docker:**  Install Docker Desktop from  [https://www.docker.com/products/docker-desktop/](https://www.docker.com/products/docker-desktop/). Refer to the official documentation for installation instructions specific to your operating system.
 
 **Installation Steps:**
 
-1.  **Clone the Repository:**
+Open a terminal or command prompt and navigate to your desired installation directory and clone repository using Git:
 
-	Open a terminal or command prompt and navigate to your desired installation directory and clone repository using Git:
+	git clone https://github.com/piaccho/quiz-review-app.git
 
-		git clone https://github.com/piaccho/quiz-review-app.git
+Then navigate to the cloned project directory:
+
+	cd quiz-review-app
+
+You can run this application in two ways:
     
-2.  **Run the Application:**
-    
-    Navigate to the cloned project directory. There are sub-directories `/master/backend` and `/master/frontend` there are respectively server and client of application. First on the server, then on the client, run the following command:
+1.  **Building from Source (Manual)**:
+
+    Build and run the server by navigating to the `/master/backend` subdirectory and run the following command:
 
         gradle bootRun
         
-    This task will automatically build the application using Gradle and then execute it.
-	    
-	<b>Note</b>: If you're using an IDE that supports Gradle (e.g., IntelliJ IDEA), you can configure it to run the `bootRun` task directly both for the server and client.
+	   To build and run the client, from the root directory of application, navigate to the `/master/frontend` subdirectory and run the following command:
+	
+		gradle run
+
+	<b>Note</b>: If you're using an IDE that supports Gradle (e.g., IntelliJ IDEA), you can run easily both the server and client.
+
+2.  **Docker Compose**:
 
 <div id="example-of-use" />
 
