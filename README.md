@@ -10,7 +10,7 @@
 * [Used technologies](#used-technologies)
 * [Features](#features)
 * [Setup](#setup)
-* [Example of use](#example-of-use)
+* [Demo](#demo)
 * [Credits](#credits)
 
 <div id="overview" />
@@ -90,9 +90,23 @@ Then navigate to the cloned project directory:
 
 <b>Note</b>: If you use an IDE that supports Gradle (e.g. IntelliJ IDEA), you can easily run both the server and the client.
 
-<div id="example-of-use" />
+<div id="demo" />
 
-## 💻 Example of use 
+## 💻 Demo
+
+Showcase of functionalities:
+
+https://github.com/piaccho/quiz-review-app/assets/86687829/fc771636-2d7e-45d9-a4f0-703223839d43
+
+
+Example results exported in PDF and XLSX
+
+<div style="width:600px">
+
+![Exported results in PDF and XLSX](docs/images/exported.png) 
+
+</div>
+
 
 ## Credits
 
