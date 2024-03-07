@@ -1,6 +1,14 @@
+@font-face {
+    src: url('/fonts/GFSNeohellenic-Regular.ttf');
+}
+
+@font-face {
+    src: url('/fonts/GFSNeohellenic-Bold.ttf');
+}
+
 .root {
-    -fx-font-size: 14px;
-    -fx-font-family: monospace;
+    -fx-font-size: 20px;
+    -fx-font-family: 'GFS Neohellenic Regular';
     -fx-background-color: #ffffff;
 }
 
@@ -15,7 +23,8 @@
 .button:hover {
     -fx-background-color: #D0BFFF;
     -fx-text-fill: black;
-    -fx-font-weight: bold;
+    /*-fx-font-weight: bold*/
+    -fx-font-family: 'GFS Neohellenic Bold';
     -fx-translate-y: -2px;
     -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 15, 0, 0, 0);
 }

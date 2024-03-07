@@ -1,15 +1,19 @@
 @font-face {
-    src: url('/fonts/Lora-Regular.ttf');
+    src: url('/fonts/GFSNeohellenic-Regular.ttf');
+}
+
+@font-face {
+    src: url('/fonts/GFSNeohellenic-Bold.ttf');
 }
 
 .root {
-    -fx-font-size: 14px;
-    -fx-font-family: 'Lora Regular';
+    -fx-font-size: 20px;
+    -fx-font-family: 'GFS Neohellenic Regular';
     -fx-background-color: #ffffff;
 }
 
 .left-section {
-    -fx-font-size: 15px;
+    -fx-font-size: 20px;
     -fx-background-color: #DFCCFB;
 }
 
@@ -24,7 +28,8 @@
 .button:hover {
     -fx-background-color: #D0BFFF;
     -fx-text-fill: black;
-    -fx-font-weight: bold;
+    -fx-font-family: 'GFS Neohellenic Bold';
+    /*-fx-font-weight: bold;*/
     -fx-translate-y: -2px;
     -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 15, 0, 0, 0);
 }
@@ -41,6 +46,11 @@
     -fx-background-color: #BEADFA;
     -fx-border-width: 2px;
     -fx-border-color: #DFCCFB;
+    -fx-font-family: 'GFS Neohellenic Bold';
+}
+
+.table-view .column-header-background .label {
+    -fx-font-family: 'GFS Neohellenic Bold';
 }
 
 .table-row-cell{
@@ -60,14 +70,16 @@
     -fx-background-insets: 0;
     -fx-background-radius: 1;
     -fx-border-color: #DFCCFB;
-    -fx-font-weight: bold;
+    /*-fx-font-weight: bold;*/
+    -fx-font-family: 'GFS Neohellenic Bold';
 }
 
 .titled-pane > .title {
     -fx-background-color: #BEADFA;
     -fx-border-width: 2px;
     -fx-border-color: #DFCCFB;
-    -fx-font-weight: bold;
+    /*-fx-font-weight: bold;*/
+    -fx-font-family: 'GFS Neohellenic Bold';
 }
 
 .titled-pane > .content {
@@ -80,10 +92,12 @@
 
 .list-cell:filled:selected {
     -fx-background-color: #D0BFFF;
-    -fx-font-weight: normal;
+    /*-fx-font-weight: normal;*/
+    -fx-font-family: 'GFS Neohellenic Regular';
 }
 
 .list-cell:filled:selected:focused {
     -fx-background-color: #D0BFFF;
-    -fx-font-weight: bold;
+    -fx-font-family: 'GFS Neohellenic Bold';
+    /*-fx-font-weight: bold;*/
 }

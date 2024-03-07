@@ -1,6 +1,14 @@
+@font-face {
+    src: url('/fonts/GFSNeohellenic-Regular.ttf');
+}
+
+@font-face {
+    src: url('/fonts/GFSNeohellenic-Bold.ttf');
+}
+
 .root {
-    -fx-font-size: 14px;
-    -fx-font-family: monospace;
+    -fx-font-size: 20px;
+    -fx-font-family: 'GFS Neohellenic Regular';
     -fx-background-color: #FFF3DA;
 }
 

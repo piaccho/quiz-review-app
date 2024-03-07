@@ -16,7 +16,7 @@
 <BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.unicorns.frontend.controller.PresetAddDialogController"
-            prefHeight="400.0" prefWidth="600.0"
+            prefHeight="500.0" prefWidth="700.0"
             stylesheets="/styles/presetaddstyle.css">
     <top>
         <VBox spacing="10" alignment="CENTER">

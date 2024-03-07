@@ -1,5 +1,6 @@
 package com.unicorns.frontend.controller;
 
+import com.unicorns.frontend.Main;
 import com.unicorns.frontend.handler.PrizeCategoryHandler;
 import com.unicorns.frontend.handler.PrizeHandler;
 import com.unicorns.frontend.model.Prize;
@@ -11,6 +12,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -75,6 +77,8 @@ public class PrizesCustomizationDialogController {
         loader.setLocation(QuizAppController.class.getClassLoader().getResource(PRIZE_CONTAINER_ADD_DIALOG_FXML));
         BorderPane rootLayout = loader.load();
         Stage stage = new Stage();
+        stage.setTitle("Add PrizeBox");
+        stage.getIcons().add(new Image(Main.class.getResourceAsStream("/icons/unicorn.jpg")));
         stage.initModality(Modality.APPLICATION_MODAL);
         stage.setScene(new Scene(rootLayout));
 

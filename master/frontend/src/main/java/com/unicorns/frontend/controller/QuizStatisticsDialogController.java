@@ -2,6 +2,7 @@ package com.unicorns.frontend.controller;
 
 import com.unicorns.frontend.DTO.QuizQuestionDTO;
 import com.unicorns.frontend.DTO.QuizStatisticsDTO;
+import com.unicorns.frontend.Main;
 import com.unicorns.frontend.handler.QuizStatisticsHandler;
 import io.reactivex.rxjava3.core.Observable;
 import io.reactivex.rxjava3.schedulers.Schedulers;
@@ -17,6 +18,7 @@ import javafx.scene.Scene;
 import javafx.scene.chart.BarChart;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Modality;
@@ -107,6 +109,7 @@ public class QuizStatisticsDialogController {
         loader.setLocation(QuizAppController.class.getClassLoader().getResource(QUIZ_QUESTION_STATISTICS_DIALOG_FXML));
         BorderPane rootLayout = loader.load();
         Stage stage = new Stage();
+        stage.getIcons().add(new Image(Main.class.getResourceAsStream("/icons/unicorn.jpg")));
         stage.setTitle(quizQuestion.getQuestionContent());
         stage.initModality(Modality.APPLICATION_MODAL);
         stage.setScene(new Scene(rootLayout));

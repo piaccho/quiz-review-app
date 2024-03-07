@@ -2,9 +2,11 @@ package com.unicorns.frontend.controller;
 
 import com.unicorns.frontend.DTO.QuizQuestionDTO;
 import com.unicorns.frontend.DTO.QuizStatisticsDTO;
+import com.unicorns.frontend.Main;
 import com.unicorns.frontend.model.QuizEntry;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.text.Font;
 import javafx.stage.Modality;
@@ -59,6 +61,7 @@ public class QuizAppController {
         BorderPane layout = loader.load();
 
         Stage stage = new Stage();
+        stage.getIcons().add(new Image(Main.class.getResourceAsStream("/icons/unicorn.jpg")));
         stage.setTitle(title);
         stage.initModality(Modality.APPLICATION_MODAL);
         stage.initOwner(primaryStage);

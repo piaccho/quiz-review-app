@@ -1,6 +1,14 @@
+@font-face {
+    src: url('/fonts/GFSNeohellenic-Regular.ttf');
+}
+
+@font-face {
+    src: url('/fonts/GFSNeohellenic-Bold.ttf');
+}
+
 .root {
-    -fx-font-size: 14px;
-    -fx-font-family: monospace;
+    -fx-font-size: 20px;
+    -fx-font-family: 'GFS Neohellenic Regular';
     -fx-background-color: #D0BFFF;
 }
 
@@ -19,7 +27,8 @@
 .button:hover {
     -fx-background-color: #D0BFFF;
     -fx-text-fill: black;
-    -fx-font-weight: bold;
+    /*-fx-font-weight: bold;*/
+    -fx-font-family: 'GFS Neohellenic Bold';
     -fx-translate-y: -2px;
     -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 15, 0, 0, 0);
 }
@@ -30,19 +39,22 @@
 
 .list-cell:filled:selected {
     -fx-background-color: #D0BFFF;
-    -fx-font-weight: normal;
+    /*-fx-font-weight: normal;*/
+    -fx-font-family: 'GFS Neohellenic Regular';
 }
 
 .list-cell:filled:selected:focused {
     -fx-background-color: #D0BFFF;
-    -fx-font-weight: bold;
+    /*-fx-font-weight: bold;*/
+    -fx-font-family: 'GFS Neohellenic Bold';
 }
 
 .titled-pane > .title {
     -fx-background-color: #BEADFA;
     -fx-border-width: 2px;
     -fx-border-color: #DFCCFB;
-    -fx-font-weight: bold;
+    /*-fx-font-weight: bold;*/
+    -fx-font-family: 'GFS Neohellenic Bold';
 }
 
 .titled-pane > .content {
