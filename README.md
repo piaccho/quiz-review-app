@@ -64,9 +64,10 @@ Here're some of the project's best features:
 
 -   **JDK 17 or later**: Download and install from  [https://www.oracle.com/java/technologies/downloads/](https://www.oracle.com/java/technologies/downloads/). Verify installation by running  `java -version`  in your terminal.
 -   **Gradle**: Download and install Gradle distribution from [https://services.gradle.org/distributions/gradle-8.4-bin.zip](https://services.gradle.org/distributions/gradle-8.4-bin.zip). Verify installation by running  `gradle --version`  in your terminal.
-- **(Optional) Docker:**  Install Docker Desktop from  [https://www.docker.com/products/docker-desktop/](https://www.docker.com/products/docker-desktop/). Refer to the official documentation for installation instructions specific to your operating system.
 
 **Installation Steps:**
+
+1.  **Clone Repository**:
 
 Open a terminal or command prompt and navigate to your desired installation directory and clone repository using Git:
 
@@ -76,21 +77,18 @@ Then navigate to the cloned project directory:
 
 	cd quiz-review-app
 
-You can run this application in two ways:
     
-1.  **Building from Source (Manual)**:
+2.  **Build and run**:
 
-    Build and run the server by navigating to the `/master/backend` subdirectory and run the following command:
+   Build and run the server by navigating to the `/master/backend` subdirectory and run the following command:
 
-        gradle bootRun
-        
-	   To build and run the client, from the root directory of application, navigate to the `/master/frontend` subdirectory and run the following command:
-	
-		gradle run
+    gradle bootRun
+       
+   To build and run the client, from the root directory of application, navigate to the `/master/frontend` subdirectory and run the following command:
 
-	<b>Note</b>: If you're using an IDE that supports Gradle (e.g., IntelliJ IDEA), you can run easily both the server and client.
+	gradle run
 
-2.  **Docker Compose**:
+<b>Note</b>: If you use an IDE that supports Gradle (e.g. IntelliJ IDEA), you can easily run both the server and the client.
 
 <div id="example-of-use" />
 
